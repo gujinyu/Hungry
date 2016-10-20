@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/ionic.min.css" />
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+    </script>
+    <style>
+    
+    #footer_font{
+    	font-size: 14px;
+    	font-weight: 800;
+    }
+    	#h1{
+    		font-weight: bold;
+    		font-size: 19px;
+    		font-family: "微软雅黑";
+    		line-height: 54px;
+    	}
+    	#food,.price{
+    		font-weight: bold;
+    	}
+    	#Add{
+    		color: #35b3e4;
+    		text-decoration: none;
+    		font-size: 14px;
+    	}
+    	#Add:hover{
+    		text-decoration:underline;
+    	}
+    	#blod{
+    		font-weight: bold;
+    		font-family: serif;
+    	}
+    	#org{
+    		color: #ffcdb4;
+    		
+    	}
+    	#row{
+    		padding-bottom: 15px;
+    	}
+    </style>
+</head>
+<body>
+	<div class="bar bar-header bar-light bar-calm" style="height: 54px;">
+		<h1 class="title" id="h1">饿了吧</h1>
+	</div>
+	
+	<div class="list has-header" id="content" style="margin-top: 10px; padding-bottom: 25px;height: 580px; overflow-y: scroll; overflow-x: hidden;font-family: '微软雅黑';">
+		<div class="item" style="font-size: 14px;" id="first">
+			<div class="row" id="row" style="margin-left: -6px;">
+				<div class="col-15">
+					<span id="blod">订餐时间 </span>: &nbsp;	
+				</div>
+				<div class="col-80" style="white-space: normal;">
+					<span id="order_time">2016-09-25 10:10:18</span>
+				</div>
+			</div>
+			<div class="row" id="row">
+				<div class="col-15">
+					<span class="assertive">订餐内容 : &nbsp;</span>	
+				</div>
+				<div class="col-80" style="white-space: normal;">
+					<span id="order_content">老北京烤鸭 (1)</span>
+				</div>
+			</div>
+			<div class="row" id="row">
+				<div class="col-15">
+					<span class="assertive">配送信息 : &nbsp;</span>
+				</div>
+				<div class="col-80" style="white-space: normal;">
+					<span id="order_username">马先生</span>，
+					<span id="order_userNumber">400-017-8677</span>，
+					<span id="order_Address">
+						北京朝阳区东三环南路98号高和蓝枫大厦18层1802室
+					</span>
+				</div>
+			</div>
+			<div class="row" id="row">
+				<div class="col-15">
+					<span>合计金额 : &nbsp;</span>	
+				</div>
+				<div class="col-80 assertive" style="white-space: normal; font-weight: bold;">
+					￥<span id="order_money">45</span>元
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-15">
+					<span>支付状态 : &nbsp;</span>	
+				</div>
+				<div class="col-80" style="white-space: normal;">
+					<span>货到付款</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tabs tabs-icon-top" style="height: 56px; padding-top: 4px;">
+		<a class="tab-item" href="index.html">
+			<i class="icon ion-beer" style="font-size: 23px;"></i>
+			<span id="footer_font">
+				菜单
+			</span>
+		</a>
+		<a class="tab-item" href="shopcar.html">
+			<i class="icon ion-android-cart" style="font-size: 23px;"></i>
+			<span id="footer_font">
+				购物车
+			</span>
+		</a>
+		<a class="tab-item" style="color: #35b3e4;">
+			<i class="icon ion-android-document" style="font-size: 23px;"></i>
+			<span id="footer_font">
+				订单
+			</span>
+		</a>
+		<a class="tab-item" href="me.html">
+			<i class="icon ion-person" style="font-size: 23px;"></i>
+			<span id="footer_font">
+				我的
+			</span>
+		</a>
+	</div>
+	<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#first").css("display","none")
+						var JsonData=[{"fID":"C684C9F61EC00001DCAA8B661AA01508","fCreateTime":"2015-03-04 16:40:45","fContent":"宫爆鸡丁(1) 老北京炸酱面(1) ","fSum":"45.00","fUserID":"ms.zhang","fUserName":"张女士","fPhoneNumber":"010-59798677","fAddress":"北京十里河地铁站A/B口，东150米，高和蓝峰大厦1802","fPayState":"0"},{"fID":"C684C9F85E400001C4211EB544F61283","fCreateTime":"2015-03-04 16:40:55","fContent":"老北京烤鸭套餐(1) 剁椒鱼头套餐(2) ","fSum":"117.00","fUserID":"ms.zhang","fUserName":"张女士","fPhoneNumber":"010-59798677","fAddress":"北京十里河地铁站A/B口，东150米，高和蓝峰大厦1802","fPayState":"0"},{"fID":"C684C9FC08400001353CBDD011D0BA60","fCreateTime":"2015-03-04 16:41:10","fContent":"鱼香肉丝盖饭(1) 尖椒肉丝盖饭(2) ","fSum":"45.00","fUserID":"ms.zhang","fUserName":"张女士","fPhoneNumber":"010-59798677","fAddress":"北京十里河地铁站A/B口，东150米，高和蓝峰大厦1802","fPayState":"0"},{"fID":"C684CA2C30400001DB66D89079AC1203","fCreateTime":"2015-03-04 16:44:27","fContent":"鱼香肉丝盖饭(1) 土豆炖牛肉套餐(1) 老北京烤鸭套餐(1) ","fSum":"95.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA2DCD400001665940D048801D35","fCreateTime":"2015-03-04 16:44:33","fContent":"老北京烤鸭套餐(1) 土豆炖牛肉套餐(1) ","fSum":"80.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA2EB53000014B1165101D801787","fCreateTime":"2015-03-04 16:44:37","fContent":"土豆炖牛肉套餐(1) 老北京烤鸭套餐(1) ","fSum":"80.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA2F9EC00001681812EC23204EA0","fCreateTime":"2015-03-04 16:44:41","fContent":"家常肉饼(1) 剁椒鱼头套餐(1) ","fSum":"46.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA3104B00001F4B0186016101DC4","fCreateTime":"2015-03-04 16:44:47","fContent":"老北京炸酱面(1) 老北京烤鸭套餐(1) 土豆炖牛肉套餐(1) ","fSum":"100.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA32137000017BD075EF91B09380","fCreateTime":"2015-03-04 16:44:51","fContent":"土豆炖牛肉套餐(1) 老北京烤鸭套餐(1) 剁椒鱼头套餐(1) ","fSum":"116.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA333FB000018D8F13C018F01524","fCreateTime":"2015-03-04 16:44:56","fContent":"剁椒鱼头套餐(1) 宫爆鸡丁(1) 老北京炸酱面(1) ","fSum":"81.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA3466B000016BFE9210196812BA","fCreateTime":"2015-03-04 16:45:00","fContent":"土豆炖牛肉套餐(1) 老北京烤鸭套餐(1) ","fSum":"80.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA35CF30000128F9A6D0C07D11D4","fCreateTime":"2015-03-04 16:45:06","fContent":"鱼香肉丝盖饭(1) 老北京烤鸭套餐(1) ","fSum":"60.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA371CC00001E357CDC643D4EAB0","fCreateTime":"2015-03-04 16:45:12","fContent":"尖椒肉丝盖饭(1) 老北京炸酱面(1) ","fSum":"35.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA3871700001BA376A1019A4157D","fCreateTime":"2015-03-04 16:45:17","fContent":"老北京炸酱面(1) 宫爆鸡丁(1) 剁椒鱼头套餐(1) ","fSum":"81.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA396CC0000110CE6A20E5001F80","fCreateTime":"2015-03-04 16:45:21","fContent":"鱼香肉丝盖饭(1) 尖椒肉丝盖饭(1) ","fSum":"30.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA3AD1300001EDB4B7E558375F70","fCreateTime":"2015-03-04 16:45:27","fContent":"鱼香肉丝盖饭(1) 尖椒肉丝盖饭(1) 家常肉饼(1) ","fSum":"40.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA3BD5300001533A1CE516727ED0","fCreateTime":"2015-03-04 16:45:31","fContent":"剁椒鱼头套餐(1) 宫爆鸡丁(1) ","fSum":"61.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA3D0450000171A81AF811D03740","fCreateTime":"2015-03-04 16:45:36","fContent":"剁椒鱼头套餐(1) 老北京烤鸭套餐(1) ","fSum":"81.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA3E02D000015D7712B31C5AD360","fCreateTime":"2015-03-04 16:45:40","fContent":"老北京烤鸭套餐(1) 土豆炖牛肉套餐(1) ","fSum":"80.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA3EF930000156201E203200CD80","fCreateTime":"2015-03-04 16:45:44","fContent":"剁椒鱼头套餐(1) 宫爆鸡丁(1) ","fSum":"61.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"},{"fID":"C684CA403A4000017A8FBAB093D01B65","fCreateTime":"2015-03-04 16:45:49","fContent":"土豆炖牛肉套餐(1) 老北京烤鸭套餐(1) ","fSum":"80.00","fUserID":"user","fUserName":"马先生","fPhoneNumber":"400-017-8677","fAddress":"北京朝阳区东三环南路98号高和蓝峰大厦18层1802室","fPayState":"0"}];
+						var food_order=[];
+						$.each(JsonData, function(index,ele) {
+							food_order[index]=ele;
+							var t=$("#first").clone();
+							t.css("display","block")
+							$("#content").append(t); 
+							$(t).find("#order_time").html(ele.fCreateTime);
+							$(t).find("#order_username").html(ele.fUserName);
+							$(t).find("#order_userNumber").html(ele.fPhoneNumber);
+							$(t).find("#order_content").html(ele.fContent);
+							$(t).find("#order_Address").html(ele.fAddress);
+							$(t).find("#order_money").html(ele.fSum);
+						});
+				
+			})
+		</script>
+</body>
+</html>

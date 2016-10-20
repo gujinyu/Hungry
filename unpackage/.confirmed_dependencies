@@ -1,0 +1,55 @@
+{
+  "me.html": {
+    "href": "me.html",
+    "resources": [
+      "css/ionic.min.css"
+    ],
+    "refer": [
+      "index.html",
+      "shopcar.html",
+      "order.html"
+    ],
+    "priority": 0
+  },
+  "order.html": {
+    "href": "order.html",
+    "resources": [
+      "css/ionic.min.css",
+      "js/jquery.min.js"
+    ],
+    "refer": [
+      "index.html",
+      "shopcar.html",
+      "me.html"
+    ],
+    "priority": 0
+  },
+  "shopcar.html": {
+    "href": "shopcar.html",
+    "resources": [
+      "css/ionic.min.css",
+      "js/jquery.min.js"
+    ],
+    "refer": [
+      "index.html",
+      "order.html",
+      "me.html"
+    ],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "css/ionic.min.css",
+      "js/ionic.bundle.min.js",
+      "js/jquery.min.js",
+      "img/1.jpg"
+    ],
+    "refer": [
+      "shopcar.html",
+      "order.html",
+      "me.html"
+    ],
+    "priority": 0
+  }
+}
